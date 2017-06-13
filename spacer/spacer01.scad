@@ -18,7 +18,7 @@ module spacer(height, outer, inner, fn=100) {
     fudge = 1/cos(180/fn); // circumscribed
 
     difference() {
-        cylinder(height, outer * fudge, outer * fudge, $fn=fn);
+        cylinder(height, outer, outer, $fn=fn);
         
         translate([0, 0, -0.1])
         cylinder(height + 0.2, inner * fudge, inner * fudge, $fn=fn);
